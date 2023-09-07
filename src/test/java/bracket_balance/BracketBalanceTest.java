@@ -24,7 +24,7 @@ public class BracketBalanceTest {
     public void test_not_balanced() {
 
         String balancedButInverted = "][";
-        String formulaNotBalanced = "{(a+b-[c-d])";
+        String formulaNotBalanced = "}(a+b-[c-d])";
         String balancedButNotOrdered = "([)]";
         String onlyOpenBrackets = "[[";
 
