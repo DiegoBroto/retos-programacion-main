@@ -24,16 +24,16 @@ public class BracketBalance {
         // a little help, you could use the Stack structure
         Stack<Character> stack = new Stack<>();
         for (int i = 0; i < text.length(); i++) {
-            char ch = text.charAt(i);
-            if (ch == '(' || ch == '{' || ch == '[') {
-                stack.push(ch);
+            char caracter = text.charAt(i);
+            if (caracter == '(' || caracter == '{' || caracter == '[') {
+                stack.push(caracter);
                 continue;
             }
             if (stack.isEmpty()) { // que diferencia existe entre Empty y isEmpty)
                 return false;
             }
             char check;
-            switch (ch) {
+            switch (caracter) {
                 case ')':
                     check = stack.pop();
                     if (check == '{' || check == '[') {
@@ -57,11 +57,7 @@ public class BracketBalance {
 
 
         }
-        if (stack.isEmpty()) {
-            return true;
-        }else{
-            return false;
-        }
+        return stack.isEmpty();
         //return balanced;
     }
 }
